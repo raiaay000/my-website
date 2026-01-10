@@ -1,0 +1,177 @@
+/* === Subtle right shift to prevent cut-off feel === */
+.confirm-wrap {
+  padding-left: clamp(22px, 4vw, 48px);
+  padding-right: clamp(16px, 3vw, 32px);
+}
+/* confirmation-only polish (keeps main site styles untouched) */
+
+.page-simple { overflow-x: hidden; }
+
+.confirm-wrap {
+  max-width: 1100px; /* wider than checkout so it doesn’t feel cramped */
+}
+
+/* HERO */
+.confirm-hero {
+  margin-top: 18px;
+  border-radius: 22px;
+  border: 2px solid rgba(212,164,55,0.22);
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255,107,157,0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, rgba(0,212,255,0.08) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(26,26,38,0.92), rgba(139,69,19,0.10));
+  box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+  overflow: hidden;
+  position: relative;
+}
+
+.confirm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: var(--gold);
+  padding: 10px 18px;
+  border: 2px solid rgba(212,164,55,0.28);
+  background: rgba(0,0,0,0.35);
+  border-radius: 999px;
+  margin: 18px;
+}
+
+.confirm-hero-inner {
+  padding: 12px 22px 22px;
+}
+
+.confirm-event {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 800;
+  margin: 8px 0 6px;
+  letter-spacing: 1px;
+}
+
+.confirm-meta {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+.confirm-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,164,55,0.30), transparent);
+  margin: 14px 0 18px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* SECTIONS */
+.confirm-section {
+  margin-top: 22px;
+}
+
+.confirm-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.confirm-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  margin: 0;
+}
+
+.confirm-sub {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* DETAILS GRID */
+.confirm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .confirm-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .confirm-grid { grid-template-columns: 1fr; }
+}
+
+.info-card {
+  border-radius: 18px;
+  border: 2px solid rgba(212,164,55,0.14);
+  background: rgba(0,0,0,0.35);
+  padding: 16px 16px;
+  backdrop-filter: blur(10px);
+}
+
+.info-card.highlight {
+  border-color: rgba(212,164,55,0.32);
+  box-shadow: 0 10px 40px rgba(212,164,55,0.08);
+}
+
+.info-label {
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.info-value.gold { color: var(--gold); }
+.info-value.mono, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* TICKET LIST */
+.ticket-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ticket-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(212,164,55,0.12);
+  background: rgba(0,0,0,0.28);
+}
+
+.ticket-row strong {
+  font-weight: 800;
+}
+
+.ticket-row .price {
+  color: var(--gold);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+}
+
+/* Footer spacing */
+.confirm-foot {
+  margin-top: 22px;
+}

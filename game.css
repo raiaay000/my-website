@@ -1,0 +1,125 @@
+.simple-wrap { max-width: 1120px; }
+
+.game-hero {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid rgba(212,164,55,0.22);
+  box-shadow: 0 22px 70px rgba(0,0,0,0.55);
+  margin-top: 18px;
+}
+
+.game-hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+@media (max-width: 700px) {
+  .game-hero img { height: 320px; }
+}
+
+.game-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 80%, rgba(255,107,157,0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 20%, rgba(0,212,255,0.12) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.72) 70%, rgba(0,0,0,0.85) 100%);
+}
+
+.game-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  gap: 12px;
+  z-index: 2;
+}
+
+.hero-chip {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,164,55,0.22);
+  background: rgba(0,0,0,0.32);
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.game-layout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .game-layout { grid-template-columns: 1fr; }
+}
+
+.facts {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.facts li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,164,55,0.14);
+  background: rgba(139,69,19,0.08);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.facts li span { color: var(--text-secondary); font-weight: 600; }
+.facts li strong { color: var(--gold); font-weight: 900; }
+
+.game-about {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.game-callout {
+  margin-top: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,107,157,0.22);
+  background: linear-gradient(135deg, rgba(255,107,157,0.10), rgba(0,0,0,0.25));
+  padding: 14px 14px;
+}
+
+.callout-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: var(--pink);
+  margin-bottom: 6px;
+}
+
+.callout-text { color: rgba(255,255,255,0.92); }
+
+/* === Game page visual offset (prevent cut-off look) === */
+body.page-simple .simple-wrap {
+  padding-left: clamp(28px, 4.5vw, 56px);
+  padding-right: clamp(18px, 3vw, 32px);
+}

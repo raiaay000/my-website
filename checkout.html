@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NECS 2026 | Checkout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+
+<body class="page-simple">
+  <main class="simple-wrap" id="main">
+    <header class="simple-header">
+      <a class="simple-back" href="index.html#tickets">← Back</a>
+      <h1 class="simple-title">Checkout</h1>
+      <p class="simple-sub">Review your tickets and enter payment details to confirm your registration.</p>
+    </header>
+
+    <div class="checkout-layout">
+      <!-- LEFT: customer + payment (one continuous flow) -->
+      <section class="simple-card">
+        <h2 class="simple-h2">Ticket Holder</h2>
+
+        <div class="form-grid">
+          <label class="field">
+            <span>Full Name</span>
+            <input id="name" type="text" placeholder="First Last" autocomplete="name" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input id="email" type="email" placeholder="you@email.com" autocomplete="email" />
+          </label>
+        </div>
+
+        <label class="field" style="margin-top:14px;">
+          <span>Day (only if you bought Day Pass)</span>
+          <select id="dayChoice">
+            <option value="">Not a Day Pass</option>
+            <option>Wednesday, May 6</option>
+            <option>Thursday, May 7</option>
+            <option>Friday, May 8</option>
+            <option>Saturday, May 9</option>
+            <option>Sunday, May 10</option>
+          </select>
+        </label>
+
+        <div class="section-divider"></div>
+
+        <h2 class="simple-h2">Payment</h2>
+
+        <div class="pay-banner">
+          <div>
+            <div class="pay-label">Amount due</div>
+            <div class="pay-total" id="payTotal">$0.00</div>
+          </div>
+          <div class="pay-badges">
+            <span class="pay-badge">Secure Demo</span>
+            <span class="pay-badge">Card Required</span>
+          </div>
+        </div>
+
+        <div class="form-grid" style="margin-top:12px;">
+          <label class="field field-wide">
+            <span>Card Number</span>
+            <input id="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" />
+          </label>
+
+          <label class="field">
+            <span>Expiry</span>
+            <input id="cardExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" />
+          </label>
+
+          <label class="field">
+            <span>CVC</span>
+            <input id="cardCvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" />
+          </label>
+
+          <label class="field">
+            <span>Billing ZIP</span>
+            <input id="cardZip" inputmode="numeric" autocomplete="postal-code" placeholder="37203" />
+          </label>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-outline" id="clearBtn" type="button">Clear Cart</button>
+          <button class="btn btn-primary" id="payBtn" type="button">Pay & Confirm</button>
+        </div>
+
+        <p class="muted tiny" style="margin-top:10px;">
+          Demo checkout: validates fields + generates a confirmation screen.
+        </p>
+      </section>
+
+      <!-- RIGHT: summary (not independently scrolling) -->
+      <section class="simple-card">
+        <h2 class="simple-h2">Order Summary</h2>
+        <div id="summary" class="summary-box"></div>
+
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="total">$0.00</strong>
+        </div>
+
+        <div class="summary-note">
+          Your cart is saved between pages. If you go back, you won’t lose totals.
+        </div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast">Saved</div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NECS 2026 | Confirmation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- base site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- confirmation-only overrides -->
+  <link rel="stylesheet" href="confirm.css" />
+</head>
+
+<body class="page-simple">
+  <main class="simple-wrap confirm-wrap" id="main">
+    <header class="simple-header">
+      <a class="simple-back" href="index.html">← Back to Home</a>
+      <h1 class="simple-title">Registration Confirmed</h1>
+      <p class="simple-sub">You’re officially in. Save this info for check-in.</p>
+    </header>
+
+    <!-- HERO / STATUS -->
+    <section class="confirm-hero">
+      <div class="confirm-pill">CONFIRMED</div>
+
+      <div class="confirm-hero-inner">
+        <h2 class="confirm-event">NECS 2026</h2>
+        <p class="confirm-meta">Live from Music City • Bridgestone Arena • Nashville, TN</p>
+
+        <div class="confirm-divider"></div>
+
+        <div class="confirm-actions">
+          <a class="btn btn-outline" href="index.html#schedule">View Schedule</a>
+          <a class="btn btn-primary" href="index.html#tickets">Buy More Tickets</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="confirm-section">
+      <div class="confirm-section-head">
+        <h2 class="confirm-h2">Your Details</h2>
+        <p class="confirm-sub">Show this at check-in if asked.</p>
+      </div>
+
+      <div class="confirm-grid">
+        <div class="info-card">
+          <div class="info-label">Name</div>
+          <div class="info-value" id="cName">—</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Email</div>
+          <div class="info-value" id="cEmail">—</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Order ID</div>
+          <div class="info-value mono" id="cOrder">—</div>
+        </div>
+
+        <div class="info-card highlight">
+          <div class="info-label">Total Paid</div>
+          <div class="info-value gold" id="cTotal">$0.00</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section class="confirm-section">
+      <div class="confirm-section-head">
+        <h2 class="confirm-h2">Tickets</h2>
+        <p class="confirm-sub">Keep this page handy — it’s your demo receipt.</p>
+      </div>
+
+      <div class="ticket-list" id="cTickets">
+        <!-- JS injects rows -->
+      </div>
+    </section>
+
+    <footer class="confirm-foot">
+      <p class="muted tiny">
+        This is a demo confirmation page. In a real checkout, this would also email your receipt.
+      </p>
+    </footer>
+
+    <div class="toast" id="toast">Saved</div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

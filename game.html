@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NECS 2026 | Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+
+<body class="page-simple">
+  <main class="simple-wrap" id="main">
+    <header class="simple-header">
+      <a class="simple-back" href="index.html#games">← Back</a>
+      <h1 class="simple-title" id="gTitle">Game</h1>
+      <p class="simple-sub" id="gSub">—</p>
+    </header>
+
+    <section class="game-hero">
+      <img id="gImg" alt="" />
+      <div class="game-hero-overlay">
+        <div class="hero-chip">NECS 2026 • Nashville</div>
+        <div class="hero-actions">
+          <button class="btn btn-outline" id="followBtn" type="button">Follow Updates</button>
+          <a class="btn btn-primary" href="index.html#tickets">Get Tickets</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="game-layout">
+      <section class="simple-card">
+        <h2 class="simple-h2">Quick Facts</h2>
+        <ul class="facts" id="gFacts"></ul>
+      </section>
+
+      <section class="simple-card">
+        <h2 class="simple-h2">What to Expect</h2>
+        <p class="game-about" id="gAbout"></p>
+
+        <div class="game-callout">
+          <div class="callout-title">Pro tip</div>
+          <div class="callout-text">Show up early for the first match — it sets the vibe and the seats go fast.</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast">Saved</div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

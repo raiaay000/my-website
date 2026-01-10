@@ -1,0 +1,84 @@
+.simple-wrap { max-width: 980px; }
+
+.confirm-hero {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(212,164,55,0.25);
+  background: radial-gradient(ellipse at 20% 80%, rgba(255,107,157,0.12) 0%, transparent 45%),
+              radial-gradient(ellipse at 80% 20%, rgba(0,212,255,0.10) 0%, transparent 45%),
+              linear-gradient(135deg, rgba(26,26,38,0.92), rgba(139,69,19,0.10));
+}
+
+.confirm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,164,55,0.22);
+  background: rgba(0,0,0,0.28);
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.confirm-title {
+  margin-top: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.confirm-sub {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.confirm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .confirm-grid { grid-template-columns: 1fr; }
+}
+
+.confirm-item {
+  border: 1px solid rgba(212,164,55,0.14);
+  background: rgba(139,69,19,0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.confirm-item .k {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.confirm-item .v {
+  font-weight: 700;
+  color: #fff;
+}
+
+.confirm-item .v.gold { color: var(--gold); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.section-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, transparent, rgba(212,164,55,0.28), transparent);
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
